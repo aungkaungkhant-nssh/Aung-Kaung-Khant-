@@ -1,90 +1,189 @@
 import React from 'react'
-import {Box,Typography,LinearProgress,Grid} from '@mui/material'
-function Skills() {
+import {Box,Paper,Typography} from '@mui/material'
+import HTML from '../asset/images/html.png'
+import CSS3 from '../asset/images/css3.png'
+import Javascript from '../asset/images/javascript.png'
+import Vue from '../asset/images/vuejs.png'
+import BootStrap from '../asset/images/bootstrap.png'
+import ReactIcon from '../asset/images/react.png'
+import Redux from '../asset/images/reduxx.png'
+import Python from '../asset/images/python.png'
+import Django from '../asset/images/django.png'
+import NodeJs from '../asset/images/nodejs.png'
+import MySql from '../asset/images/mysql.png'
+import MongoDb from '../asset/images/mongodb.png'
+import Firebase from '../asset/images/firebase.png'
+import Mui from '../asset/images/mui.png'
+import {  logoAnimate} from '../config/animate'
+import MotionContainer from './MotionContainer'
+import {motion} from 'framer-motion'
+function Skills({theme}) {
   return (
-    <Box sx={{height:"100vh",padding:"1rem"}}  id="skills">
-        <Box sx={{width:"100px",margin:"0 auto 1rem auto",borderBottom:"2px solid #e91e63",padding:".5rem"}}>
-            <Typography variant='h6' textAlign="center" fontWeight="bolder">Skills</Typography>
-        </Box>
-        <Typography  variant="subtitle1" textAlign="center" sx={{color:"#424242"}}>
-            I have above one and half year experience in web devlopement. You can show my skills.
-        </Typography>
-        <Box sx={{width:"80%",margin:"2rem auto 0rem auto"}}>
-            <Grid container spacing={3}>
-                <Grid item xs={12} md={6} className="wow fadeInLeft">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">HTML</Typography>
-                      <Typography variant='body2'>90%</Typography>
+    <Box data-section id="Skills" sx={{marginBottom:"3rem",padding:"1rem",scrollMarginTop:{xs:"9rem",md:"6rem"}}}  >
+         
+              <Box sx={{width:"100%",marginTop:"1rem",marginLeft:{md:"40px"}}}>
+                <MotionContainer>
+                    <Box sx={{marginBottom:"2rem"}}>
+                        <Typography  variant="h5"   sx={{fontWeight:"bolder",letterSpacing:"3px",marginBottom:"1.2rem"}}>
+                            FrontEnd Skills
+                        </Typography>
+                        <Paper sx={{backgroundColor:"appbar.background",width:"100%",padding:"18px 10px 6px 10px",borderRadius:"20px"}} elevation={theme.palette.mode==="light" ? 1 : 5} >
+                            <Box sx={{display:"flex",flexWrap:"wrap",width:"100%",alignItems:"center",justifyContent:"space-around"}}>
+                             
+                                    <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                           <motion.div variants={logoAnimate()}> 
+                                                <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                        <img src={HTML} alt=""  />  
+                                                </Box>  
+                                                <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>HTML</Typography>
+                                           </motion.div>
+                                    </Box>
+                             
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                        <motion.div variants={logoAnimate()}> 
+                                            <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                <img src={CSS3} alt="" /> 
+                                            </Box>
+                                            <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>CSS</Typography>
+                                        </motion.div> 
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                        <motion.div variants={logoAnimate()}> 
+                                                <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                        <img src={Javascript} alt="" /> 
+                                                </Box>
+                                                <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>JS</Typography>
+                                        </motion.div>
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                        <motion.div variants={logoAnimate()}> 
+                                            <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                <img src={BootStrap} alt="" /> 
+                                            </Box>
+                                            <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>BootStrap</Typography>
+                                        </motion.div>
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                        <motion.div variants={logoAnimate()}>
+                                            <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                <img src={Vue} alt="" /> 
+                                            </Box>
+                                            <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>Vue</Typography>
+                                        </motion.div>
+                                       
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                        <motion.div variants={logoAnimate()}>
+                                            <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                        <img src={ReactIcon} alt="" style={{width:"35px",height:"35px"}}/> 
+                                            </Box>
+                                            <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}} >React</Typography>
+                                        </motion.div>
+                                     
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                        <motion.div variants={logoAnimate()}>
+                                            <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                <img src={Mui} alt="" style={{width:"35px",height:"35px"}} /> 
+                                            </Box>
+                                            <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>MUI</Typography>
+                                        </motion.div>
+                                       
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                     <motion.div variants={logoAnimate()}>   
+                                         <Box sx={{display:"flex",justifyContent:"center"}}>
+                                            <img src={Redux} alt="" style={{width:"35px",height:"35px"}} /> 
+                                          </Box>
+                                          <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>Redux</Typography>
+                                     </motion.div>
+                                </Box>
+                            </Box>
+                        
+                        </Paper>
                     </Box>
-                    <LinearProgress variant="determinate" value="90" color="secondary" />
-                 
-                </Grid>
-                <Grid item xs={12} md={6} className="wow fadeInRight">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">CSS</Typography>
-                      <Typography variant='body2'>80%</Typography>
+                </MotionContainer>
+                <MotionContainer> 
+                    <Box sx={{marginBottom:"2rem"}}>
+                        <Typography  variant="h5" sx={{fontWeight:"bolder",letterSpacing:"3px",marginBottom:"1.2rem"}}>
+                            Backend Skills
+                        </Typography>
+                        <Paper sx={{backgroundColor:"appbar.background",width:"100%",padding:"18px 10px 6px 10px",borderRadius:"20px"}} elevation={theme.palette.mode==="light" ? 1 : 5}>
+                            <Box sx={{display:"flex",flexWrap:"wrap",width:"100%",alignItems:"center",justifyContent:"space-around"}}>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                    <motion.div variants={logoAnimate()}>
+                                            <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                    <img src={Python} alt=""  />  
+                                            </Box>  
+                                            <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>Python</Typography>
+                                    </motion.div>
+                                       
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                    <motion.div variants={logoAnimate()}>
+                                            <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                <img src={Django} alt="" style={{width:"35px",height:"35px"}} /> 
+                                            </Box>
+                                            <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>Django</Typography>
+                                    </motion.div>
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                    <motion.div variants={logoAnimate()}>
+                                        <Box sx={{display:"flex",justifyContent:"center"}}>
+                                            <img src={NodeJs} alt="" style={{width:"35px",height:"35px"}} /> 
+                                        </Box>
+                                        <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>Nodejs</Typography>
+                                    </motion.div>
+                                       
+                                </Box>
+                            
+                            </Box>
+                        
+                        </Paper>
                     </Box>
-                    <LinearProgress variant="determinate" value="80" color="secondary" />
-                </Grid>
-                <Grid item xs={12} md={6} className="wow fadeInLeft">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">JavaScript</Typography>
-                      <Typography variant='body2'>85%</Typography>
+                </MotionContainer>
+                <MotionContainer>
+                    <Box>
+                        <Typography  variant="h5"   sx={{fontWeight:"bolder",letterSpacing:"3px",marginBottom:"1.2rem"}}>
+                            Database Skills
+                        </Typography>
+                        <Paper sx={{backgroundColor:"appbar.background",width:"100%",padding:"18px 10px 6px 10px",borderRadius:"20px"}} elevation={theme.palette.mode==="light" ? 1 : 5} >
+                            <Box sx={{display:"flex",flexWrap:"wrap",width:"100%",alignItems:"center",justifyContent:"space-around"}}>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                    <motion.div variants={logoAnimate()}>
+                                        <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                <img src={MySql} alt=""  />  
+                                        </Box>  
+                                        <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>MySql</Typography>
+                                    </motion.div>
+                                       
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                       <motion.div variants={logoAnimate()}>
+                                                <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                    <img src={MongoDb} alt=""  /> 
+                                                </Box>
+                                                <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>MongoDb</Typography>
+                                       </motion.div>
+                                </Box>
+                                <Box sx={{width:{md:"10%",xs:"20%"},cursor:"pointer",transition:"all .3s","&:hover":{transform:"scale(1.2)"}}}>
+                                       <motion.div variants={logoAnimate()}>
+                                            <Box sx={{display:"flex",justifyContent:"center"}}>
+                                                <img src={Firebase} alt="" style={{width:"35px",height:"35px"}} /> 
+                                            </Box>
+                                            <Typography textAlign="center" variant='body2' sx={{color:"#52525b",marginY:".6rem"}}>Firebase</Typography>
+                                       </motion.div>
+                                </Box>
+                            
+                            </Box>
+                        
+                        </Paper>
                     </Box>
-                    <LinearProgress variant="determinate" value="85" color="secondary" />
-                </Grid>
-                <Grid item xs={12} md={6} className="wow fadeInRight">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">BootStrap</Typography>
-                      <Typography variant='body2'>80%</Typography>
-                    </Box>
-                    <LinearProgress variant="determinate" value="80" color="secondary" />
-                </Grid>
-                <Grid item xs={12} md={6} className="wow fadeInLeft">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">Material UI</Typography>
-                      <Typography variant='body2'>60%</Typography>
-                    </Box>
-                    <LinearProgress variant="determinate" value="60" color="secondary" />
-                </Grid>
-                <Grid item xs={12} md={6} className="wow fadeInRight">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">VUE JS</Typography>
-                      <Typography variant='body2'>70%</Typography>
-                    </Box>
-                    <LinearProgress variant="determinate" value="70" color="secondary" />
-                </Grid>
-                <Grid item xs={12} md={6} className="wow fadeInLeft">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">React JS</Typography>
-                      <Typography variant='body2'>75%</Typography>
-                    </Box>
-                    <LinearProgress variant="determinate" value="75" color="secondary" />
-                </Grid>
-                <Grid item xs={12} md={6} className="wow fadeInRight">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">NODE JS</Typography>
-                      <Typography variant='body2'>50%</Typography>
-                    </Box>
-                    <LinearProgress variant="determinate" value="50" color="secondary" />
-                </Grid>
-                <Grid item xs={12} md={6} className="wow fadeInLeft">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">MONGODB</Typography>
-                      <Typography variant='body2'>40%</Typography>
-                    </Box>
-                    <LinearProgress variant="determinate" value="40" color="secondary" />
-                </Grid>
-                <Grid item xs={12} md={6} className="wow fadeInRight">
-                    <Box  display="flex" alignItems="center" justifyContent="space-between" marginBottom=".4rem">
-                      <Typography variant='body2' marginRight="8px">React Native</Typography>
-                      <Typography variant='body2'>30%</Typography>
-                    </Box>
-                    <LinearProgress variant="determinate" value="30" color="secondary" />
-                </Grid>
-            </Grid>
-     
-        </Box>
+                </MotionContainer>
+                   
+             </Box>
+        
+      
     </Box>
   )
 }
